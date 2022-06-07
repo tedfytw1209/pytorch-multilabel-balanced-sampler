@@ -26,7 +26,7 @@ class RandomDataset(Dataset):
 
     def __getitem__(self, index):
         example = Variable(torch.tensor(self.X[index]), requires_grad=False)
-        labels = Variable(torch.tensor(self.y[index]), requires_grad=False)
+        labels = Variable(torch.tensor(self.y[index]), requires_grad=False) #(n_examples, n_classes)
         return {"example": example, "labels": labels}
 
 
