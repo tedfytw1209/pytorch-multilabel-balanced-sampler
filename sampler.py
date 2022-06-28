@@ -33,7 +33,7 @@ class MultilabelBalancedRandomSampler(Sampler):
         self.labels = labels
         self.indices = indices
         if self.indices is None:
-            self.indices = range(len(labels))
+            self.indices = np.arange(len(labels))
 
         self.num_classes = self.labels.shape[1]
 
